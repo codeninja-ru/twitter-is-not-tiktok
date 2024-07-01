@@ -15,7 +15,7 @@
 // @grant       GM_registerMenuCommand
 // @connect raw.githubusercontent.com
 // @require     https://openuserjs.org/src/libs/sizzle/GM_config.js
-// @updateURL https://raw.githubusercontent.com/codeninja-ru/twitter-is-not-tiktok/main/twitter-is-not-tiktok.user.js
+// @updateURL https://raw.githubusercontent.com/codeninja-ru/twitter-is-not-tiktok/main/twitter_is_not_tiktok.user.js#bypass=true
 // ==/UserScript==
 
 const MIN_TEXT_LENGTH = 50;
