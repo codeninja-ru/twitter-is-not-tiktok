@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         TNT Twitter is not Tiktok
 // @namespace    twitter
-// @version      0.2
+// @version      0.3
 // @license MIT
 // @description  Hides posts with videos
 // @author       https://x.com/codeninja_ru
@@ -14,7 +14,6 @@
 // @grant       GM_addStyle
 // @grant       GM_registerMenuCommand
 // @connect raw.githubusercontent.com
-// @require     https://openuserjs.org/src/libs/sizzle/GM_config.js
 // @updateURL https://raw.githubusercontent.com/codeninja-ru/twitter-is-not-tiktok/main/twitter_is_not_tiktok.user.js
 // ==/UserScript==
 
@@ -125,21 +124,3 @@ selectAllVideos(document).forEach(processVideo);
 watchOnVideos(function(videos) {
     videos.forEach(processVideo);
 });
-
-
-
-const config = new GM_config({
-  'id': 'MyConfig', // The id used for this instance of GM_config
-  'title': 'Script Settings', // Panel Title
-  'fields': // Fields object
-  {
-    'Name': // This is the id of the field
-    {
-      'label': 'Name', // Appears next to field
-      'type': 'text', // Makes this setting a text field
-      'default': 'Sizzle McTwizzle' // Default value if user doesn't change it
-    }
-  }
-});
-
-gmRegisterMenuCommand('Setting', function() { config.open(); }, 's');
